@@ -1,0 +1,40 @@
+# LLM Inference Evaluation Engine Configuration
+
+# Dataset configuration
+data:
+  dataset_path: "dataset.json"
+
+# Model configuration
+model:
+  # Adapter type: "openai", "claude", "custom", "mock"
+  adapter_type: "mock"
+  
+  # Model name
+  model_name: "gpt-4.1"
+  
+  # API key (can also be set via environment variables)
+  api_key: "removed"
+  
+  # Custom API configuration (only used when adapter_type is "custom")
+  api_url: "https://your-api-endpoint.com/v1/chat/completions"
+  request_format: "openai"  # "openai" or "custom"
+
+# Evaluation configuration
+evaluation:
+  # Whether to print detailed information
+  verbose: false
+  
+  # Sleep time between requests (seconds)
+  sleep_time: 0.5
+  
+  # Model generation parameters
+  temperature: 0.0
+  max_tokens: 500
+
+# Output configuration
+output:
+  # Results save path
+  results_path: "evaluation_results.json"
+  
+  # Whether to save results
+  save_results: true
